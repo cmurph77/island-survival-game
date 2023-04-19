@@ -96,6 +96,12 @@ tw-story[tags="maze"] {
  background-size:cover;
 }
 
+tw-story[tags="back-shed"] {
+ background-image:url("https://media.istockphoto.com/id/175488286/photo/abandoned.jpg?s=612x612&w=0&k=20&c=pxFJSIp7-SwgFobWRNrZkt1oqK38mmSB2sVjENGO6Ew=");
+ background-size:cover;
+}
+
+
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="1150,200" size="100,100">After a terrible storm, you wash up along the shore to discover your boat has crashed. Looking around to see trees and an endless ocean, you realise you are alone and stranded on a desert island. Searching for a way out, you decide to inspect the beach further and assess the damage done to your boat.
 
@@ -205,10 +211,10 @@ The first riddle is, “What comes up but never comes down?”
 
 [[Back|CabinEx]]]</tw-passagedata><tw-passagedata pid="18" name="Bathroom" tags="bathroom" position="1175,1475" size="100,100">(bg:(hsl:0,0,0,0.9))[Seeing broken glass and cracked tiles, exploring here is probably not safe. You should head back to the living room. 
 
-[[Back|CabinEx]]]</tw-passagedata><tw-passagedata pid="19" name="Back Shed" tags="" position="975,1050" size="100,100">In the shed, you see dead plants and old gardening equipment. In the corner, you see some glistening metal; exploring further, you have discovered an axe! You bring it, hoping it will help you escape the island. 
+[[Back|CabinEx]]]</tw-passagedata><tw-passagedata pid="19" name="Back Shed" tags="back-shed" position="975,1050" size="100,100">(bg:(hsl:0,0,0,0.9))[In the shed, you see dead plants and old gardening equipment. In the corner, you see some glistening metal; exploring further, you have discovered an axe! You bring it, hoping it will help you escape the island. 
 
 [[Back|CabinEx]] 
-(set: $hasAxe to true)</tw-passagedata><tw-passagedata pid="20" name="Bedroom" tags="bedroom" position="950,1275" size="100,100">
+(set: $hasAxe to true)]</tw-passagedata><tw-passagedata pid="20" name="Bedroom" tags="bedroom" position="950,1275" size="100,100">
 (if:$hasCrowbar is false)[(bg:(hsl:0,0,0,0.9))[The Bedroom has nothing except old clothes and furniture. You notice a hatch in the floor at the corner of the room and see it is very rusty, that you will need help opening it.]]
 
 (else-if: $bunkerLock is false)[(bg:(hsl:0,0,0,0.9))[The Bedroom has nothing except old clothes and furniture. You notice a hatch in the floor at the corner of the room and see it is very rusty, but you might be able to [[pry it open|Bunker]]]]
