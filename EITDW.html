@@ -18,6 +18,7 @@
 tw-story[tags="map"] {
  background-image:url("https://www.swaen.com/uploads/91011.jpg");
  background-size:cover;
+ bg:(hsl:0,0,0,0.9);
 }
 
 tw-story[tags="clearing"] {
@@ -51,7 +52,7 @@ tw-story[tags="shop"] {
 }
 
 tw-story[tags="house"] {
- background-image:url(https://cdn.pixabay.com/photo/2020/05/26/01/10/nepali-village-houses-5220915_1280.jpg");
+ background-image:url("https://cdn.pixabay.com/photo/2020/05/26/01/10/nepali-village-houses-5220915_1280.jpg");
  background-size:cover;
 }
 
@@ -96,7 +97,7 @@ tw-story[tags="maze"] {
 }
 
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="400,175" size="100,100">After a terrible storm, you wash up along the shore to discover your boat has crashed. Looking around to see trees and an endless ocean, you realise you are alone and stranded on a desert island. Searching for a way out, you decide to inspect the beach further and assess the damage done to your boat.
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="1150,200" size="100,100">After a terrible storm, you wash up along the shore to discover your boat has crashed. Looking around to see trees and an endless ocean, you realise you are alone and stranded on a desert island. Searching for a way out, you decide to inspect the beach further and assess the damage done to your boat.
 
 [[Start|Beach]]
 
@@ -107,35 +108,33 @@ tw-story[tags="maze"] {
 (set: $hasFuel to false)
 (set: $withMan to false)
 (set: $bunkerLock to false)
-(set: $riddle to 0)</tw-passagedata><tw-passagedata pid="2" name="Cabin" tags="cabin" position="500,500" size="100,100">You see a wooden cabin, the windows smashed, and the front garden covered in overgrown plants. You inspect the surroundings to see if anyone lives there. You realise you have no choice but to explore it, hoping to find some of the materials you need to fix your boat.
+(set: $riddle to 0)</tw-passagedata><tw-passagedata pid="2" name="Cabin" tags="cabin" position="1150,850" size="100,100">(bg:(hsl:0,0,0,0.9))[You see a wooden cabin, the windows smashed, and the front garden covered in overgrown plants. You inspect the surroundings to see if anyone lives there. You realise you have no choice but to explore it, hoping to find some of the materials you need to fix your boat.
 
-[[Expore the Cabin|CabinEx]]
-[[Map]]</tw-passagedata><tw-passagedata pid="3" name="Beach" tags="beach" position="725,200" size="100,100">
-Looking at your boat, there has been enough damage that you will need to explore the island for supplies.  The wood is missing from the floor, there is no fuel, and your food and supplies have got lost in the crash. 
+[[Explore the Cabin|CabinEx]]
+[[Map]]
+]</tw-passagedata><tw-passagedata pid="3" name="Beach" tags="beach" position="1175,425" size="100,100">(bg:(hsl:0,0,0,0.9))[Looking at your boat, there has been enough damage that you will need to explore the island for supplies.  The wood is missing from the floor, there is no fuel, and your food and supplies have got lost in the crash.
 
 To leave the Island, you’ll need the following: 
 (if:$hasWood is false)[Wood]
 (if:$hasFuel is false)[Fuel]
 (if:$hasFoodAndSupplies is false)[Food and Supplies]
 
-
 (if:$hasWood is true and $hasFuel is true and $hasFoodAndSupplies is true) [
 (if:$withMan is true)[[[Leave|BadEnding]]]
-(else:)[[Leave|GoodEnding]]
-]
+(else:)[[Leave|GoodEnding]]]
 
 [[Map]]
-b</tw-passagedata><tw-passagedata pid="4" name="Woods" tags="woods" position="825,825" size="100,100">this is a test change  for git **
-
-
-Walking through the forest, the trees stretch as far as the eye can see. Hearing nothing except the crunching of your footsteps and the echoing of birds, you notice something in the distance. 
+]
+</tw-passagedata><tw-passagedata pid="4" name="Woods" tags="woods" position="875,650" size="100,100">(bg:(hsl:0,0,0,0.9))[Walking through the forest, the trees stretch as far as the eye can see. Hearing nothing except the crunching of your footsteps and the echoing of birds, you notice something in the distance. 
 You stumble across a maze 20 feet high you realise your only way past is through the maze. You [[enter|Maze1]], hoping to find something at the end that will help you escape. 
 
-[[back|Map]]</tw-passagedata><tw-passagedata pid="5" name="Town" tags="town" position="1900,525" size="100,100">&#39;&#39;Entering the town, you see many derelict buildings bordered by wooden planks. Looking around, you see three possible locations. A house, shop and pub. You walk forward to investigate. &#39;&#39;
+[[back|Map]]
+]</tw-passagedata><tw-passagedata pid="5" name="Town" tags="town" position="2175,925" size="100,100">(bg:(hsl:0,0,0,0.9))[Entering the town, you see many derelict buildings bordered by wooden planks. Looking around, you see three possible locations. A house, shop and pub. You walk forward to investigate. &#39;
 
 [[Explore|TownEx]]
-[[Back|Bridge]]
-</tw-passagedata><tw-passagedata pid="6" name="Map" tags="map" position="700,500" size="100,100">Would you like to explore the [[Clearing]], the [[Cabin]], the [[Woods]], the [[Bridge]], or head back to the [[Beach]] ?[Your Text Here]</tw-passagedata><tw-passagedata pid="7" name="CabinEx" tags="cabin" position="375,625" size="100,100">Entering the cabin, it is dark, cold and dusty. All the furniture has been upheaved from what would&#39;ve been a lovely family home. Your gaze turns to pictures on the wall of a family of three, a mother, a father and a small girl. You realise that this place must have been abandoned a long time ago. 
+[[Back|Bridge]]]</tw-passagedata><tw-passagedata pid="6" name="Map" tags="map" position="1150,650" size="100,100">(bg:(hsl:0,0,0,0.9))[
+Would you like to explore the [[Clearing]], the [[Cabin]], the [[Woods]], the [[Bridge]], or head back to the [[Beach]] ?[Your Text Here]
+]</tw-passagedata><tw-passagedata pid="7" name="CabinEx" tags="cabin" position="1150,1275" size="100,100">(bg:(hsl:0,0,0,0.9))[Entering the cabin, it is dark, cold and dusty. All the furniture has been upheaved from what would&#39;ve been a lovely family home. Your gaze turns to pictures on the wall of a family of three, a mother, a father and a small girl. You realise that this place must have been abandoned a long time ago. 
 You are met with four doors; which one do you want to choose? 
 
 [[Door 1|Kitchen]]
@@ -143,7 +142,7 @@ You are met with four doors; which one do you want to choose?
 [[Door 3|Back Shed]]
 [[Door 4|Bedroom]]
 [[back|Cabin]]
-</tw-passagedata><tw-passagedata pid="8" name="Bunker" tags="bunker" position="25,1025" size="100,100">(if:$hasMan is true)[After using the crowbar to open the hatch, you uncover a bunker. After reluctantly going down, you see a shelf full of food. Reaching for it, you are pulled back by a dishevelled older man. 
+]</tw-passagedata><tw-passagedata pid="8" name="Bunker" tags="bunker" position="725,1275" size="100,100">(if:$hasMan is true)[(bg:(hsl:0,0,0,0.9))[After using the crowbar to open the hatch, you uncover a bunker. After reluctantly going down, you see a shelf full of food. Reaching for it, you are pulled back by a dishevelled older man. 
 
 Frightened for your life, you jump back. He questions you on how you found him after explaining your boat crash; he explains he has lived here for 30 years after a deadly tsunami wiped the island of civilisation. 
 
@@ -154,117 +153,150 @@ Do you rob him of his food and leave? Or do you take him with you?
 [[Bring him with you|Bad Choice]]
 [[Leave him|Good Choice]]
 (set: $hasFoodAndSupplies to true)
-]
-(else:)[Theres nothing else here.
+]]
+(else:)[(bg:(hsl:0,0,0,0.9))[Theres nothing else here.
 
-[[Leave|Bedroom]]]
+[[Leave|Bedroom]]]]
 
-</tw-passagedata><tw-passagedata pid="9" name="TownEx" tags="town" position="1425,825" size="100,100">Would you like to go to the 
+</tw-passagedata><tw-passagedata pid="9" name="TownEx" tags="town" position="2475,950" size="100,100">(bg:(hsl:0,0,0,0.9))[
+Would you like to go to the 
 [[Shop]]
 [[Pub]]
 [[House]]
+]
 
-[[back|Map]]</tw-passagedata><tw-passagedata pid="10" name="Shop" tags="shop" position="1525,1125" size="100,100">Entering the shop, you can barely see the floor because all the items have been thrown around. You explore further, kicking the rubbish out of your way. On one of the shelves, you notice a canister of fuel. You immediately take it knowing you&#39;ll need this to fix your boat. 
+(bg:(hsl:0,0,0,0.9))[
+[[Leave|Map]]
+]</tw-passagedata><tw-passagedata pid="10" name="Shop" tags="shop" position="2700,975" size="100,100">(bg:(hsl:0,0,0,0.9))[
+Entering the shop, you can barely see the floor because all the items have been thrown around. You explore further, kicking the rubbish out of your way. On one of the shelves, you notice a canister of fuel. You immediately take it knowing you&#39;ll need this to fix your boat. 
 (set: $hasFuel to true)
 [[Back|TownEx]]
-</tw-passagedata><tw-passagedata pid="11" name="Pub" tags="pub" position="1300,1050" size="100,100">Entering the pub, you hear the subtle bell ring behind you as you open the door. The place is vacant like the rest of the island. The area is littered with rubbish and empty glasses. 
+]</tw-passagedata><tw-passagedata pid="11" name="Pub" tags="pub" position="2475,1150" size="100,100">(bg:(hsl:0,0,0,0.9))[Entering the pub, you hear the subtle bell ring behind you as you open the door. The place is vacant like the rest of the island. The area is littered with rubbish and empty glasses. 
 
 You notice three possible places to search for items. Do you want to explore the [[bar|Bar]], the [[bathroom|PBathroom]] or [[under the tables|table]]? 
 
 [[Back|TownEx]]
-</tw-passagedata><tw-passagedata pid="12" name="House" tags="house" position="1650,1000" size="100,100">An abandoned house on the main street looks promising, hoping it wasn&#39;t destroyed of all its items.  You walk towards it, noticing it has been covered in dead plants; it almost looks unrecognisable. You look in the windows to see inside and notice a door to the side of the house. 
+]</tw-passagedata><tw-passagedata pid="12" name="House" tags="house" position="2475,700" size="100,100">(bg:(hsl:0,0,0,0.9))[
+An abandoned house on the main street looks promising, hoping it wasn&#39;t destroyed of all its items.  You walk towards it, noticing it has been covered in dead plants; it almost looks unrecognisable. You look in the windows to see inside and notice a door to the side of the house. ]
+
+(bg:(hsl:0,0,0,0.9))[
 (if:$hasKey is true)[You hold out the key you found in the bar.
 [[Try the key|Empty]]
 ] (else:)[ [[Try to Enter|Lock]]]
-[[Back|TownEx]]</tw-passagedata><tw-passagedata pid="13" name="Bridge" tags="bridge" position="900,575" size="100,100">Heading towards the town, you start walking over the bridge, encountering a troll. They explain that they live under the bridge anticipating one day the arrival of someone to answer their riddles. 
+[[Back|TownEx]]
+]</tw-passagedata><tw-passagedata pid="13" name="Bridge" tags="bridge" position="1500,725" size="100,100">(bg:(hsl:0,0,0,0.9))[Heading towards the town, you start walking over the bridge, encountering a troll. They explain that they live under the bridge anticipating one day the arrival of someone to answer their riddles. 
 
 Hesitant to believe them, you have no choice but to answer their riddles if you want to go to the town to find the necessary supplies. 
 
 (if:$riddle%3 is 0)[[[Answer the riddle|Riddle1]]] (if:$riddle%3 is 1)[[[Answer the riddle|Riddle2]]] (if:$riddle%3 is 2)[[[Answer the riddle|Riddle3]]]
 (set: $riddle to $riddle+1)
-[[Map]]</tw-passagedata><tw-passagedata pid="14" name="Riddle1" tags="" position="1125,650" size="100,100">He comes closer; he says he is so excited you want to play a game with him. 
+[[Map]]]</tw-passagedata><tw-passagedata pid="14" name="Riddle1" tags="" position="1875,850" size="100,100">He comes closer; he says he is so excited you want to play a game with him. 
 
 The first riddle is, “What comes up but never comes down?”
 
 [[Age|Town]]
-[[Wrong2]]</tw-passagedata><tw-passagedata pid="15" name="Riddle2" tags="" position="1300,350" size="100,100">“What has hands and a face but can’t hold anything or smile?”
+[[Wrong2]]</tw-passagedata><tw-passagedata pid="15" name="Riddle2" tags="" position="1900,1000" size="100,100">“What has hands and a face but can’t hold anything or smile?”
 
 [[A Clock|Town]]
-[[Wrong1]]</tw-passagedata><tw-passagedata pid="16" name="Riddle3" tags="" position="1175,825" size="100,100">“What can you break, even if you never pick it up or touch it?”
+[[Wrong1]]</tw-passagedata><tw-passagedata pid="16" name="Riddle3" tags="" position="1925,1150" size="100,100">“What can you break, even if you never pick it up or touch it?”
 
 [[A Promise|Town]]
-[[Wrong3]]</tw-passagedata><tw-passagedata pid="17" name="Kitchen" tags="kitchen" position="75,375" size="100,100">You open the door and are met with a terrible stench covering your nose to escape the smell; you realise there is nothing here except rotten food. 
+[[Wrong3]]</tw-passagedata><tw-passagedata pid="17" name="Kitchen" tags="kitchen" position="1350,1275" size="100,100">(bg:(hsl:0,0,0,0.9))[You open the door and are met with a terrible stench covering your nose to escape the smell; you realise there is nothing here except rotten food. 
 
-[[back|CabinEx]]</tw-passagedata><tw-passagedata pid="18" name="Bathroom" tags="bathroom" position="75,575" size="100,100">Seeing broken glass and cracked tiles, exploring here is probably not safe. You should head back to the living room. 
+[[Back|CabinEx]]]</tw-passagedata><tw-passagedata pid="18" name="Bathroom" tags="bathroom" position="1175,1475" size="100,100">(bg:(hsl:0,0,0,0.9))[Seeing broken glass and cracked tiles, exploring here is probably not safe. You should head back to the living room. 
 
-[[back|CabinEx]]</tw-passagedata><tw-passagedata pid="19" name="Back Shed" tags="" position="75,775" size="100,100">In the shed, you see dead plants and old gardening equipment. In the corner, you see some glistening metal; exploring further, you have discovered an axe! You bring it, hoping it will help you escape the island. 
+[[Back|CabinEx]]]</tw-passagedata><tw-passagedata pid="19" name="Back Shed" tags="" position="975,1050" size="100,100">In the shed, you see dead plants and old gardening equipment. In the corner, you see some glistening metal; exploring further, you have discovered an axe! You bring it, hoping it will help you escape the island. 
 
 [[Back|CabinEx]] 
-(set: $hasAxe to true)</tw-passagedata><tw-passagedata pid="20" name="Bedroom" tags="bedroom" position="200,875" size="100,100">(if:$hasCrowbar is false)[The Bedroom has nothing except old clothes and furniture. You notice a hatch in the floor at the corner of the room and see it is very rusty, that you will need help opening it.]
-(else-if: $bunkerLock is false))[The Bedroom has nothing except old clothes and furniture. You notice a hatch in the floor at the corner of the room and see it is very rusty, but you might be able to [[pry it open|Bunker]]]
-(else:)[The Bedroom has nothing except old clothes and furniture. You notice a hatch in the floor at the corner of the room and you hear his muffled screams.]
+(set: $hasAxe to true)</tw-passagedata><tw-passagedata pid="20" name="Bedroom" tags="bedroom" position="950,1275" size="100,100">
+(if:$hasCrowbar is false)[(bg:(hsl:0,0,0,0.9))[The Bedroom has nothing except old clothes and furniture. You notice a hatch in the floor at the corner of the room and see it is very rusty, that you will need help opening it.]]
 
-[[Back|CabinEx]] </tw-passagedata><tw-passagedata pid="21" name="Maze1" tags="maze" position="475,825" size="100,100">Met with two paths, you think about which one you will choose. 
+(else-if: $bunkerLock is false)[(bg:(hsl:0,0,0,0.9))[The Bedroom has nothing except old clothes and furniture. You notice a hatch in the floor at the corner of the room and see it is very rusty, but you might be able to [[pry it open|Bunker]]]]
+
+(else:)[(bg:(hsl:0,0,0,0.9))[The Bedroom has nothing except old clothes and furniture. You notice a hatch in the floor at the corner of the room and you hear his muffled screams.]]
+
+(bg:(hsl:0,0,0,0.9))[[[Back|CabinEx]] ]</tw-passagedata><tw-passagedata pid="21" name="Maze1" tags="maze" position="400,450" size="100,100">(bg:(hsl:0,0,0,0.9))[Met with two paths, you think about which one you will choose. 
 Do you turn right or left? 
 
 [[Maze2]]
 [[M1Wrong]]
-[[Exit|Woods]]</tw-passagedata><tw-passagedata pid="22" name="LumberMill" tags="lumber-mill" position="1050,1425" size="100,100">You turn right and exit the maze!
+[[Exit|Woods]]]</tw-passagedata><tw-passagedata pid="22" name="LumberMill" tags="lumber-mill" position="400,950" size="100,100">(bg:(hsl:0,0,0,0.9))[You turn right and exit the maze!
 You find a stack of wood take it with you, hoping it will help fix your boat.
 You head back to the woods to keep exploring. 
+
 [[Back|Woods]]
-(set: $hasWood to true)
-</tw-passagedata><tw-passagedata pid="23" name="Bad Choice" tags="bunker" position="200,1250" size="100,100">Seeing how bad the island is, you realise his knowledge would help. You think that bringing him with you can’t have much harm because there is room in your boat. You both head back to the bedroom.
+(set: $hasWood to true)]
+</tw-passagedata><tw-passagedata pid="23" name="Bad Choice" tags="bunker" position="725,1475" size="100,100">(bg:(hsl:0,0,0,0.9))[(bg:(hsl:0,0,0,0.9))[Seeing how bad the island is, you realise his knowledge would help. You think that bringing him with you can’t have much harm because there is room in your boat. You both head back to the bedroom.
+
 [[Back|Bedroom]]
-(set: $withMan to true)
-</tw-passagedata><tw-passagedata pid="24" name="Maze2" tags="" position="650,1025" size="100,100">You turn left, realising you made the right choice, and come to another fork in the path. 
+(set: $withMan to true)]]
+</tw-passagedata><tw-passagedata pid="24" name="Maze2" tags="maze" position="400,625" size="100,100">(bg:(hsl:0,0,0,0.9))[You turn left, realising you made the right choice, and come to another fork in the path. 
 Do you turn right or left?
 
 [[Maze3]]
-[[M2Wrong]]
+[[M2Wrong]]]
 
-</tw-passagedata><tw-passagedata pid="25" name="Maze3" tags="" position="825,1200" size="100,100">Another left, and you&#39;re on the right path; you make it to the end of the maze and have one more decision. 
+</tw-passagedata><tw-passagedata pid="25" name="Maze3" tags="maze" position="400,775" size="100,100">(bg:(hsl:0,0,0,0.9))[Another left, and you&#39;re on the right path; you make it to the end of the maze and have one more decision. 
 Do you turn right or left? 
 
 [[LumberMill]]
-[[M3Wrong]]
-</tw-passagedata><tw-passagedata pid="26" name="M1Wrong" tags="" position="500,1050" size="100,100">You make the wrong turn and end up at the start of the maze. 
-[[back|Woods]] </tw-passagedata><tw-passagedata pid="27" name="M2Wrong" tags="" position="575,1225" size="100,100">You make the wrong turn and end up at the start of the maze. 
-[[back|Woods]] </tw-passagedata><tw-passagedata pid="28" name="M3Wrong" tags="" position="700,1400" size="100,100">You make the wrong turn and end up at the start of the maze. 
-[[back|Woods]] </tw-passagedata><tw-passagedata pid="29" name="table" tags="pub" position="1350,1350" size="100,100">Under the tables is just full of dust and old newspapers. In the corner of your eye, you notice something glistening.
+[[M3Wrong]]]
+</tw-passagedata><tw-passagedata pid="26" name="M1Wrong" tags="maze" position="600,625" size="100,100">(bg:(hsl:0,0,0,0.9))[You make the wrong turn and end up at the start of the maze. 
+
+[[back|Woods]] ]</tw-passagedata><tw-passagedata pid="27" name="M2Wrong" tags="maze" position="600,775" size="100,100">(bg:(hsl:0,0,0,0.9))[You make the wrong turn and end up at the start of the maze. 
+
+[[back|Woods]] 
+]</tw-passagedata><tw-passagedata pid="28" name="M3Wrong" tags="maze" position="600,925" size="100,100">(bg:(hsl:0,0,0,0.9))[You make the wrong turn and end up at the start of the maze. 
+
+[[back|Woods]]
+]</tw-passagedata><tw-passagedata pid="29" name="table" tags="pub" position="2475,1400" size="100,100">(bg:(hsl:0,0,0,0.9))[
+Under the tables is just full of dust and old newspapers. In the corner of your eye, you notice something glistening.
 
 Upon looking further, you notice that you have found a key! You take it with you, hoping it will open a door later.
 
 [[Back|Pub]]
 (set: $hasKey to true)
-</tw-passagedata><tw-passagedata pid="30" name="Bar" tags="pub" position="1150,1225" size="100,100">You walk behind the bar to see empty shelves and old bottles of whisky. The counter is stained and scratched from old alcohol spills. 
+]</tw-passagedata><tw-passagedata pid="30" name="Bar" tags="pub" position="2250,1400" size="100,100">(bg:(hsl:0,0,0,0.9))[
+You walk behind the bar to see empty shelves and old bottles of whisky. The counter is stained and scratched from old alcohol spills. 
 You notice that under the fridge, there is a crowbar. You take it with you, hoping it will come in useful later. 
 
 [[Back|Pub]]
-(set: $hasCrowbar to true)</tw-passagedata><tw-passagedata pid="31" name="PBathroom" tags="pub-bathroom" position="1525,1350" size="100,100">You open the bathroom door to see the floor is flooded with old water. You turn back, not wanting to get wet.
+(set: $hasCrowbar to true)
+]</tw-passagedata><tw-passagedata pid="31" name="PBathroom" tags="pub-bathroom" position="2700,1400" size="100,100">(bg:(hsl:0,0,0,0.9))[
+You open the bathroom door to see the floor is flooded with old water. You turn back, not wanting to get wet.
 
-[[Back|Pub]]</tw-passagedata><tw-passagedata pid="32" name="Lock" tags="" position="1775,1275" size="100,100">You reach for the door and realise it is locked; you’ll need a key to get in. 
+[[Back|Pub]]
+]</tw-passagedata><tw-passagedata pid="32" name="Lock" tags="house" position="2325,525" size="100,100">(bg:(hsl:0,0,0,0.9))[
+You reach for the door and realise it is locked; you’ll need a key to get in. 
+]
+(bg:(hsl:0,0,0,0.9))[
+[[Back|House]]
+]</tw-passagedata><tw-passagedata pid="33" name="Empty" tags="house" position="2600,525" size="100,100">(bg:(hsl:0,0,0,0.9))[
+Looking around, you notice that the house has been destroyed. Opening cabinets and drawers, they&#39;re empty; you realise there&#39;ll be nothing here to help you and decide to turn back.
+]
 
-[[Back|House]]</tw-passagedata><tw-passagedata pid="33" name="Empty" tags="house" position="2050,1100" size="100,100">Looking around, you notice that the house has been destroyed. Opening cabinets and drawers, they&#39;re empty; you realise there&#39;ll be nothing here to help you and decide to turn back.
+(bg:(hsl:0,0,0,0.9))[
+[[Back|House]] 
+]</tw-passagedata><tw-passagedata pid="34" name="BadEnding" tags="beach" position="1600,450" size="100,100">(bg:(hsl:0,0,0,0.9))[After gathering all the supplies, you fix the floorboards, refill the fuel in your boat and eat the food before you set off. You tell the older man to get on so you can start your journey home. Before you know it, he hits you on the back of the head with the lumber mill launching you into the sea. 
 
-[[Back|House]] </tw-passagedata><tw-passagedata pid="34" name="BadEnding" tags="" position="975,200" size="100,100">After gathering all the supplies, you fix the floorboards, refill the fuel in your boat and eat the food before you set off. You tell the older man to get on so you can start your journey home. Before you know it, he hits you on the back of the head with the lumber mill launching you into the sea. 
+Feeling the blood trickle down your face, you&#39;re confused, only to hear the sound of an engine starting. You look up to see the man and your boat sailing into the distance and realise you’re alone and stranded on the island with no way out. ]
+</tw-passagedata><tw-passagedata pid="35" name="GoodEnding" tags="beach" position="1600,300" size="100,100">(bg:(hsl:0,0,0,0.9))[After gathering all the supplies, you fix the floorboards, refill the fuel in your boat and eat the food before you set off. You think about the older man and feel bad that you left him there; thinking about returning and getting him, you realise you chose to leave him there for a reason. 
 
-Feeling the blood trickle down your face, you&#39;re confused, only to hear the sound of an engine starting. You look up to see the man and your boat sailing into the distance and realise you’re alone and stranded on the island with no way out. 
-</tw-passagedata><tw-passagedata pid="35" name="GoodEnding" tags="" position="975,50" size="100,100">After gathering all the supplies, you fix the floorboards, refill the fuel in your boat and eat the food before you set off. You think about the older man and feel bad that you left him there; thinking about returning and getting him, you realise you chose to leave him there for a reason. 
+After an intense day, you long to flee the island. You start your boat and set off home. ]
+</tw-passagedata><tw-passagedata pid="36" name="Wrong1" tags="" position="1700,1225" size="100,100">You answered wrong; the Troll turns you away back to the map in hopes you will come back later to play his game. 
 
-After an intense day, you long to flee the island. You start your boat and set off home. 
-</tw-passagedata><tw-passagedata pid="36" name="Wrong1" tags="" position="1550,200" size="100,100">You answered wrong; the Troll turns you away back to the map in hopes you will come back later to play his game. 
+[[back|Map]] </tw-passagedata><tw-passagedata pid="37" name="Wrong2" tags="" position="1700,1075" size="100,100">You answered wrong; the Troll turns you away back to the map in hopes you will come back later to play his game.  
 
-[[back|Map]] </tw-passagedata><tw-passagedata pid="37" name="Wrong2" tags="" position="1375,625" size="100,100">You answered wrong; the Troll turns you away back to the map in hopes you will come back later to play his game.  
+[[back|Map]] </tw-passagedata><tw-passagedata pid="38" name="Wrong3" tags="" position="1700,1350" size="100,100">You answered wrong; the Troll turns you away back to the map in hopes you will come back later to play his game.  
 
-[[back|Map]] </tw-passagedata><tw-passagedata pid="38" name="Wrong3" tags="" position="1125,975" size="100,100">You answered wrong; the Troll turns you away back to the map in hopes you will come back later to play his game.  
-
-[[back|Map]] </tw-passagedata><tw-passagedata pid="39" name="Clearing" tags="clearing" position="575,650" size="100,100">There&#39;s nothing here.
-
-[[back|Map]]</tw-passagedata><tw-passagedata pid="40" name="Good Choice" tags="bunker" position="50,1225" size="100,100">You push him away and grab as much food as possible; running up the stairs, you lock him in the bunker only to hear his muffled screams from six feet below.
+[[back|Map]] </tw-passagedata><tw-passagedata pid="39" name="Clearing" tags="clearing" position="925,400" size="100,100">(bg:(hsl:0,0,0,0.9))[There&#39;s nothing here.
+]
+(bg:(hsl:0,0,0,0.9))[
+[[back|Map]]
+]</tw-passagedata><tw-passagedata pid="40" name="Good Choice" tags="bunker" position="725,1100" size="100,100">(bg:(hsl:0,0,0,0.9))[You push him away and grab as much food as possible; running up the stairs, you lock him in the bunker only to hear his muffled screams from six feet below.
 
 [[Continue|Bedroom]] 
-(set: $bunkerLock to true)</tw-passagedata></tw-storydata>
+(set: $bunkerLock to true)]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
