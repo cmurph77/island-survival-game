@@ -139,16 +139,15 @@ You stumble across a maze 20 feet high you realise your only way past is through
 
 [[Explore|TownEx]]
 [[Back|Bridge]]]</tw-passagedata><tw-passagedata pid="6" name="Map" tags="map" position="1150,650" size="100,100">(bg:(hsl:0,0,0,0.9))[
-Would you like to explore the [[Clearing]], the [[Cabin]], the [[Woods]], the [[Bridge]], or head back to the [[Beach]] ?[Your Text Here]
+Would you like to explore the [[Clearing]], the [[Cabin]], the [[Woods]], the [[Bridge]], or head back to the [[Beach]] ?
 ]</tw-passagedata><tw-passagedata pid="7" name="CabinEx" tags="cabin" position="1150,1275" size="100,100">(bg:(hsl:0,0,0,0.9))[Entering the cabin, it is dark, cold and dusty. All the furniture has been upheaved from what would&#39;ve been a lovely family home. Your gaze turns to pictures on the wall of a family of three, a mother, a father and a small girl. You realise that this place must have been abandoned a long time ago. 
 You are met with four doors; which one do you want to choose? 
-
-[[Door 1|Kitchen]]
-[[Door 2|Bathroom]]
-[[Door 3|Back Shed]]
-[[Door 4|Bedroom]]
+[[Kitchen]]
+[[Bathroom]]
+[[Bedroom]]
+[[Back Shed]]
 [[back|Cabin]]
-]</tw-passagedata><tw-passagedata pid="8" name="Bunker" tags="bunker" position="725,1275" size="100,100">(if:$hasMan is true)[(bg:(hsl:0,0,0,0.9))[After using the crowbar to open the hatch, you uncover a bunker. After reluctantly going down, you see a shelf full of food. Reaching for it, you are pulled back by a dishevelled older man. 
+]</tw-passagedata><tw-passagedata pid="8" name="Bunker" tags="bunker" position="725,1275" size="100,100">(if:$withMan is false)[(bg:(hsl:0,0,0,0.9))[After using the crowbar to open the hatch, you uncover a bunker. After reluctantly going down, you see a shelf full of food. Reaching for it, you are pulled back by a dishevelled older man. 
 
 Frightened for your life, you jump back. He questions you on how you found him after explaining your boat crash; he explains he has lived here for 30 years after a deadly tsunami wiped the island of civilisation. 
 
@@ -196,18 +195,21 @@ Hesitant to believe them, you have no choice but to answer their riddles if you 
 
 (if:$riddle%3 is 0)[[[Answer the riddle|Riddle1]]] (if:$riddle%3 is 1)[[[Answer the riddle|Riddle2]]] (if:$riddle%3 is 2)[[[Answer the riddle|Riddle3]]]
 (set: $riddle to $riddle+1)
-[[Map]]]</tw-passagedata><tw-passagedata pid="14" name="Riddle1" tags="" position="1875,850" size="100,100">He comes closer; he says he is so excited you want to play a game with him. 
+[[Map]]]</tw-passagedata><tw-passagedata pid="14" name="Riddle1" tags="" position="1850,850" size="100,100">He comes closer; he says he is so excited you want to play a game with him. 
 
 The first riddle is, “What comes up but never comes down?”
 
-[[Age|Town]]
-[[Wrong2]]</tw-passagedata><tw-passagedata pid="15" name="Riddle2" tags="" position="1900,1000" size="100,100">“What has hands and a face but can’t hold anything or smile?”
+[[Gravity|Wrong1]]
+[[Men|Wrong1]]
+[[Age|Town]]</tw-passagedata><tw-passagedata pid="15" name="Riddle2" tags="" position="1900,1000" size="100,100">“What has hands and a face but can’t hold anything or smile?”
 
+[[You|Wrong2]]
 [[A Clock|Town]]
-[[Wrong1]]</tw-passagedata><tw-passagedata pid="16" name="Riddle3" tags="" position="1925,1150" size="100,100">“What can you break, even if you never pick it up or touch it?”
+[[A Monster|Wrong2]]</tw-passagedata><tw-passagedata pid="16" name="Riddle3" tags="" position="1925,1150" size="100,100">“What can you break, even if you never pick it up or touch it?”
 
 [[A Promise|Town]]
-[[Wrong3]]</tw-passagedata><tw-passagedata pid="17" name="Kitchen" tags="kitchen" position="1350,1275" size="100,100">(bg:(hsl:0,0,0,0.9))[You open the door and are met with a terrible stench covering your nose to escape the smell; you realise there is nothing here except rotten food. 
+[[A Leg|Wrong3]]
+[[A Plate|Wrong3]]</tw-passagedata><tw-passagedata pid="17" name="Kitchen" tags="kitchen" position="1350,1275" size="100,100">(bg:(hsl:0,0,0,0.9))[You open the door and are met with a terrible stench covering your nose to escape the smell; you realise there is nothing here except rotten food. 
 
 [[Back|CabinEx]]]</tw-passagedata><tw-passagedata pid="18" name="Bathroom" tags="bathroom" position="1175,1475" size="100,100">(bg:(hsl:0,0,0,0.9))[Seeing broken glass and cracked tiles, exploring here is probably not safe. You should head back to the living room. 
 
@@ -215,17 +217,13 @@ The first riddle is, “What comes up but never comes down?”
 
 [[Back|CabinEx]] 
 (set: $hasAxe to true)]</tw-passagedata><tw-passagedata pid="20" name="Bedroom" tags="bedroom" position="950,1275" size="100,100">
-(if:$hasCrowbar is false)[(bg:(hsl:0,0,0,0.9))[The Bedroom has nothing except old clothes and furniture. You notice a hatch in the floor at the corner of the room and see it is very rusty, that you will need help opening it.]]
-
-(else-if: $bunkerLock is false)[(bg:(hsl:0,0,0,0.9))[The Bedroom has nothing except old clothes and furniture. You notice a hatch in the floor at the corner of the room and see it is very rusty, but you might be able to [[pry it open|Bunker]]]]
-
-(else:)[(bg:(hsl:0,0,0,0.9))[The Bedroom has nothing except old clothes and furniture. You notice a hatch in the floor at the corner of the room and you hear his muffled screams.]]
+(if:$hasCrowbar is false)[(bg:(hsl:0,0,0,0.9))[The Bedroom has nothing except old clothes and furniture. You notice a hatch in the floor at the corner of the room and see it is very rusty, that you will need help opening it.]](else-if: $bunkerLock is false)[(bg:(hsl:0,0,0,0.9))[The Bedroom has nothing except old clothes and furniture. You notice a hatch in the floor at the corner of the room and see it is very rusty, but you might be able to [[pry it open|Bunker]]]](else-if: $withMan is false)[(bg:(hsl:0,0,0,0.9))[The Bedroom has nothing except old clothes and furniture. You notice a hatch in the floor at the corner of the room and you hear his muffled screams.]](else:) [The Bedroom has nothing except old clothes and furniture, and the [[bunker|Bunker]]]
 
 (bg:(hsl:0,0,0,0.9))[[[Back|CabinEx]] ]</tw-passagedata><tw-passagedata pid="21" name="Maze1" tags="maze" position="400,450" size="100,100">(bg:(hsl:0,0,0,0.9))[Met with two paths, you think about which one you will choose. 
 Do you turn right or left? 
 
-[[Maze2]]
-[[M1Wrong]]
+[[Left|Maze2]]
+[[Right|M1Wrong]]
 [[Exit|Woods]]]</tw-passagedata><tw-passagedata pid="22" name="LumberMill" tags="lumber-mill" position="400,950" size="100,100">(bg:(hsl:0,0,0,0.9))[You turn right and exit the maze!
 You find a stack of wood take it with you, hoping it will help fix your boat.
 You head back to the woods to keep exploring. 
@@ -239,14 +237,14 @@ You head back to the woods to keep exploring.
 </tw-passagedata><tw-passagedata pid="24" name="Maze2" tags="maze" position="400,625" size="100,100">(bg:(hsl:0,0,0,0.9))[You turn left, realising you made the right choice, and come to another fork in the path. 
 Do you turn right or left?
 
-[[Maze3]]
-[[M2Wrong]]]
+[[Left|Maze3]]
+[[Right|M2Wrong]]]
 
 </tw-passagedata><tw-passagedata pid="25" name="Maze3" tags="maze" position="400,775" size="100,100">(bg:(hsl:0,0,0,0.9))[Another left, and you&#39;re on the right path; you make it to the end of the maze and have one more decision. 
 Do you turn right or left? 
 
-[[LumberMill]]
-[[M3Wrong]]]
+[[Left|M3Wrong]]
+[[Right|LumberMill]]]
 </tw-passagedata><tw-passagedata pid="26" name="M1Wrong" tags="maze" position="600,625" size="100,100">(bg:(hsl:0,0,0,0.9))[You make the wrong turn and end up at the start of the maze. 
 
 [[back|Woods]] ]</tw-passagedata><tw-passagedata pid="27" name="M2Wrong" tags="maze" position="600,775" size="100,100">(bg:(hsl:0,0,0,0.9))[You make the wrong turn and end up at the start of the maze. 
